@@ -19,18 +19,72 @@ book.reviews = [
     {reviewer: "Book Critic", comment: "A comprehensive guide to JavaScript."},
     {reviewer: "Book Critic", comment: "A comprehensive guide to JavaScript."},
 ]
-console.log(book)
 
-
-//////////////////////////////
+/////////////////
 const students = [
-    { name: "ali", grade: 50, dob: "1990", subjects: ["english", "math"] },
-    { name: "abdullah", grade: 100, dob: "1993", subjects: ["arabic", "math"] },
-    { name: "dawood", grade: 0, dob: "1994", subjects: ["arabic", "math"] },
+    {
+      studentId: 1,
+      name: "Alice Johnson",
+      subjects: [
+        {
+          subjectName: "Mathematics",
+          teacher: "Mr. Smith",
+          grades: {
+            midterm: 88,
+            final: 92,
+            homework: [
+              { assignmentId: 1, score: 85 },
+              { assignmentId: 2, score: 90 },
+              { assignmentId: 3, score: 95 },
+            ],
+          },
+        },
+        {
+          subjectName: "History",
+          teacher: "Mrs. Davis",
+          grades: {
+            midterm: 75,
+            final: 80,
+            homework: [
+              { assignmentId: 1, score: 70 },
+              { assignmentId: 2, score: 85 },
+              { assignmentId: 3, score: 90 },
+            ],
+          },
+        },
+      ],
+    },
+    {
+      studentId: 2,
+      name: "Bob Williams",
+      subjects: [
+        {
+          subjectName: "Science",
+          teacher: "Dr. Brown",
+          grades: {
+            midterm: 91,
+            final: 87,
+            homework: [
+              { assignmentId: 1, score: 89 },
+              { assignmentId: 2, score: 93 },
+              { assignmentId: 3, score: 88 },
+            ],
+          },
+        },
+        {
+          subjectName: "English",
+          teacher: "Ms. Green",
+          grades: {
+            midterm: 84,
+            final: 89,
+            homework: [
+              { assignmentId: 1, score: 82 },
+              { assignmentId: 2, score: 87 },
+              { assignmentId: 3, score: 91 },
+            ],
+          },
+        },
+      ],s
+    },
   ];
-
-const getTotalGrades = ()=>{
-    let grades = 0
-    students.forEach(student=>grades+=student.grade)
-    return grades
-}
+console.log(students[0].subjects[1].grades.homework[0].score+students[0].subjects[1].grades.homework[1].score+students[0].subjects[1].grades.homework[2].score);
